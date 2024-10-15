@@ -1,0 +1,11 @@
+{
+  "name": "bc17-w4d2-intro-to-express-gavin-persad",
+  "version": "1.0.0",
+  "description": "- Use `npm init` to initialize this repo folder as a Node project.\r - Go to http://expressjs.com/en/starter/installing.html and follow the instructions to install Express in your Node project.\r - Create an `index.js` file and a start script in your `package.json` that uses Node to run `index.js`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

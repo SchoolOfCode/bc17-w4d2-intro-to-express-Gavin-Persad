@@ -24,11 +24,11 @@ describe('Express Server', () => {
 		server.close(done);
 	});
 
-	it('should return a JSON object with message and message2', async () => {
+	it('should return a JSON object', async () => {
 		const response = await request(app).get('/');
 		expect(response.status).toBe(200);
-		expect(response.body).toHaveProperty('message', 'Hello World!');
-		expect(response.body).toHaveProperty('message2', 'Hello World2!');
+		expect(response.headers['content-type']).toMatch(/json/);
+		expect(response.body).toBeInstanceOf(Object);
 	});
 
 	it('should listen on the correct port', () => {

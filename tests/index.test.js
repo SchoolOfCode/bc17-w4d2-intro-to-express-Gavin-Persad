@@ -35,4 +35,14 @@ describe('Express Server', () => {
 		const port = server.address().port;
 		expect(port).toBe(Number(process.env.PORT) || 3000);
 	});
+
+	it('should return a JSON object with at least one key-value pair', async () => {
+		const response = await request(app).get('/');
+		expect(Object.keys(response.body).length).toBeGreaterThan(0);
+	});
+
+	it('should return 404 for unsupported methods', async () => {
+		const response = await request(app).post('/');
+		expect(response.status).toBe(404);
+	});
 });

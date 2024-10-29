@@ -26,3 +26,23 @@ Customise your Express server:
 
 - Instead of sending the string with text "Hello World", send a JSON object with `message: 'Hello World'`.
 - Add multiple request handlers at different paths, sending different JSON responses.
+
+## Part 6: Run tests to check it all works
+
+To ensure that your server is set up correctly and meets the requirements, follow these steps:
+
+1. **Export Your App**:
+
+   - At the end of your `index.js` file, add the following line to export your Express app:
+     ```javascript
+     export default app;
+     ```
+
+2. **Run the Tests**:
+   - Open your terminal.
+   - Run the following command to execute the tests:
+     ```bash
+     npm test
+     ```
+
+The test suite will check if your server returns a JSON object and handles unsupported methods correctly. If all tests pass, congratulations! You've successfully completed the tasks.
